@@ -1,0 +1,10 @@
+- hosts: localhost
+  vars:
+    ansible_python_interpereter: ~/nodejs-app/ansible/ansible_env/bin/python3
+  tasks:
+    - name: Gather facts
+      ansible.builtin.setup:
+
+    - name: Deploy Node.js app to Kubernetes
+      include_role:
+        name: kubernetes
